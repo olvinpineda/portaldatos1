@@ -8,8 +8,14 @@ namespace PortalDatos.BL
 {
     public class ProductosBL
     {
+        Contexto _contexto;
+        public ProductosBL()
+        {
+            _contexto = new Contexto();
+        }
        public List<Producto> ObtenerProductos()
         {
+
             var producto1 = new Producto();
             producto1.Id = 1;
             producto1.Descripcion = "Equipo de servidores";
