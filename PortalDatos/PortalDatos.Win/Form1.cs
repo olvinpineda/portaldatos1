@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PortalDatos.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace PortalDatos.Win
         public Form1()
         {
             InitializeComponent();
+            var productosBL = new ProductosBL();
+            var listadeProductos = productosBL.ObtenerProductos();
+            listadeProductosBindingSource1.DataSource = listadeProductos;
+
+
         }
+
+
     }
 }
